@@ -7,7 +7,7 @@ import sys
 network = pylast.LastFMNetwork(api_key=os.environ["LAST_API_KEY"],
                                api_secret=os.environ["LAST_API_SECRET"],
                                username=os.environ["LAST_USERNAME"],
-                               password_hash=os.environ["LAST_PASSWORD"])
+                               password_hash=os.environ["LAST_PASSWORD_HASH"])
 
 
 def main():
