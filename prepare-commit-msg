@@ -12,22 +12,18 @@ network = pylast.LastFMNetwork(api_key=os.environ["LAST_API_KEY"],
 
 def main():
     msg_file_path = sys.argv[1]
-    print "file is " + msg_file_path
 
     with open(msg_file_path, "r") as msg_file:
         msg = msg_file.read().replace('\n', '')
 
-    print "msg is " + msg
-
     now = network.get_authenticated_user().get_now_playing()
 
     if now:
-        msg += "\n" + str(now)
-        print msg
+        print "np: " + str(now)
+        msg += "\n\nnp:" + str(now)
 
         with open(msg_file_path, "w") as msg_file:
             msg_file.write(msg)
-            msg_file.flush()
 
 
 if __name__ == '__main__':
