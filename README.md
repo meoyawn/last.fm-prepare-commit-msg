@@ -19,3 +19,7 @@ https://github.com/pylast/pylast/blob/develop/README.md#getting-started
 2) run `pip install -r requirements.txt`
 
 3) copy `prepare-commit-msg` to your `.git/hooks/`
+
+## See it in action
+
+https://github.com/adelnizamutdinov/last.fm-prepare-commit-msg/commits/master
