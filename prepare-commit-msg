@@ -18,10 +18,12 @@ def main():
     now = network.get_authenticated_user().get_now_playing()
 
     if now:
-        print now
         msg += str(now)
+        print msg
+
         with open(msg_file_path, "w") as msg_file:
             msg_file.write(msg)
+            msg_file.flush()
 
 
 if __name__ == '__main__':
