@@ -22,7 +22,7 @@ def main():
     now = network.get_authenticated_user().get_now_playing()
 
     if now:
-        msg += str(now)
+        msg += "\n" + str(now)
         print msg
 
         with open(msg_file_path, "w") as msg_file:
