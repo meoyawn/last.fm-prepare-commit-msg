@@ -2,6 +2,7 @@
 
 import os
 import pylast
+import sys
 
 network = pylast.LastFMNetwork(api_key=os.environ["LAST_API_KEY"],
                                api_secret=os.environ["LAST_API_SECRET"],
@@ -10,4 +11,10 @@ network = pylast.LastFMNetwork(api_key=os.environ["LAST_API_KEY"],
 
 now = network.get_authenticated_user().get_now_playing()
 
-print now
+
+def main():
+    print sys.argv
+
+
+if __name__ == '__main__':
+    main()
