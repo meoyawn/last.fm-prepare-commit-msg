@@ -4,13 +4,19 @@ import os
 import pylast
 import sys
 
-network = pylast.LastFMNetwork(api_key=os.environ["LAST_API_KEY"],
-                               api_secret=os.environ["LAST_API_SECRET"],
-                               username=os.environ["LAST_USERNAME"],
-                               password_hash=os.environ["LAST_PASSWORD_HASH"])
-
 
 def main():
+    network = pylast.LastFMNetwork(api_key=os.environ["LAST_API_KEY"],
+                                   api_secret=os.environ["LAST_API_SECRET"])
+    track = network.get_user(os.environ["LAST_USERNAME"]).get_now_playing()
+
+    if not track:
+        return
+
+    track_str = str(track)
+
+    print("np: " + track_str)
+
     if len(sys.argv) < 2:
         return
 
@@ -19,14 +25,6 @@ def main():
     with open(msg_file_path, "r") as msg_file:
         msg = msg_file.read().replace('\n', '')
 
-    track = network.get_authenticated_user().get_now_playing()
-
-    if not track:
-        return
-
-    track_str = str(track)
-
-    print("np: " + track_str)
     np_msg = msg + "\n\nnp: " + track_str
 
     with open(msg_file_path, "w") as msg_file:
