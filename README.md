@@ -4,7 +4,6 @@ git prepare-commit-msg with last.fm now playing
 
 ## Usage
 
-
 1) setup your credentials
 
 ```bash
@@ -14,4 +13,5 @@ export LAST_USERNAME=""
 export LAST_PASSWORD=""
 ```
 
-2) copy `prepare-commit-msg` to your `.git/hooks/`
+2) run `pip install -r requirements.txt`
+3) copy `prepare-commit-msg` to your `.git/hooks/`
