@@ -14,4 +14,5 @@ export LAST_PASSWORD=""
 ```
 
 2) run `pip install -r requirements.txt`
+
 3) copy `prepare-commit-msg` to your `.git/hooks/`
