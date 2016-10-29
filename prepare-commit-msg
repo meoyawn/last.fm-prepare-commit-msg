@@ -11,7 +11,7 @@ network = pylast.LastFMNetwork(api_key=os.environ["LAST_API_KEY"],
 
 
 def main():
-    msg_file_path = sys.argv[0]
+    msg_file_path = sys.argv[1]
     with open(msg_file_path, "r") as msg_file:
         msg = msg_file.read().replace('\n', '')
 
