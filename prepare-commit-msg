@@ -16,12 +16,12 @@ def main():
     with open(msg_file_path, "r") as msg_file:
         msg = msg_file.read().replace('\n', '')
 
-    now = network.get_authenticated_user().get_now_playing()
+    track = network.get_authenticated_user().get_now_playing()
 
-    if now:
-        track_str = str(now)
+    if track:
+        track_str = str(track)
+
         print "np: " + track_str
-
         np_msg = msg + "\n\nnp: " + track_str
 
         with open(msg_file_path, "w") as msg_file:
