@@ -2,6 +2,8 @@
 
 git prepare-commit-msg with last.fm now playing
 
+inspired by https://twitter.com/mallwizard/status/788396569708158978
+
 ## Usage
 
 1) setup your credentials
