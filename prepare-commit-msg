@@ -20,7 +20,7 @@ def main():
 
     if now:
         print "np: " + str(now)
-        msg += "\n\nnp:" + str(now)
+        msg += "\n\nnp: " + str(now)
 
         with open(msg_file_path, "w") as msg_file:
             msg_file.write(msg)
