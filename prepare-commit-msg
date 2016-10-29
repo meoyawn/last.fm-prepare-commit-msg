@@ -19,11 +19,13 @@ def main():
     now = network.get_authenticated_user().get_now_playing()
 
     if now:
-        print "np: " + str(now)
-        msg += "\n\nnp: " + str(now)
+        track_str = str(now)
+        print "np: " + track_str
+
+        np_msg = msg + "\n\nnp: " + track_str
 
         with open(msg_file_path, "w") as msg_file:
-            msg_file.write(msg)
+            msg_file.write(np_msg)
 
 
 if __name__ == '__main__':
