@@ -10,7 +10,6 @@ inspired by https://twitter.com/mallwizard/status/788396569708158978
 
 ```bash
 export LAST_API_KEY=""
-export LAST_API_SECRET=""
 export LAST_USERNAME=""
 ```
 

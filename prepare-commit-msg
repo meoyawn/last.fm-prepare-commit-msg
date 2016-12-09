@@ -6,8 +6,7 @@ import sys
 
 
 def main():
-    network = pylast.LastFMNetwork(api_key=os.environ["LAST_API_KEY"],
-                                   api_secret=os.environ["LAST_API_SECRET"])
+    network = pylast.LastFMNetwork(api_key=os.environ["LAST_API_KEY"])
 
     track = network.get_user(os.environ["LAST_USERNAME"]).get_now_playing()
 
