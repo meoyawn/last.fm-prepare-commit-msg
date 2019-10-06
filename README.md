@@ -6,14 +6,14 @@ inspired by https://twitter.com/mallwizard/status/788396569708158978
 
 ## Usage
 
-1) setup your credentials
+1) setup your credentials ENV globally:
 
-```bash
+```sh
 export LAST_API_KEY=""
 export LAST_USERNAME=""
 ```
 
-2) run `pip install -r requirements.txt`
+2) run `pip3 install -r requirements.txt`
 
 3) copy `prepare-commit-msg` to your `.git/hooks/`
 
