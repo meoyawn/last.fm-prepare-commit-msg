@@ -11,6 +11,7 @@ def main():
     track = network.get_user(os.environ["LAST_USERNAME"]).get_now_playing()
 
     if not track:
+        print("nothing is playing")
         return
 
     track_str = str(track)
