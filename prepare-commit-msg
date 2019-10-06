@@ -19,6 +19,7 @@ def main():
     print("np: " + track_str)
 
     if len(sys.argv) < 2:
+        print("git should be calling this")
         return
 
     msg_file_path = sys.argv[1]
